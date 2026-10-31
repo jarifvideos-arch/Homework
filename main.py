@@ -1,31 +1,12 @@
-import pygame
-pygame.init()
-SCREEN_WIDTH=500
-SCREEN_HEIGHT=500
-display_surface=pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
-pygame.display.set_caption("Wildlife Information Display")
-background_image=pygame.transform.scale(pygame.image.load("284553.jpg").convert(),(SCREEN_WIDTH,SCREEN_HEIGHT))
-image=pygame.transform.scale(pygame.image.load("OIP.webp").convert_alpha(),(220,220))
-image_rect=image.get_rect(center=(SCREEN_WIDTH//2,SCREEN_HEIGHT//2-30))
-heading_font=pygame.font.Font(None,42)
-fact_font=pygame.font.Font(None,28)
-heading_text=heading_font.render("Wildlife Spotlight:Tiger",True,pygame.Color("black"))
-heading_rect=heading_text.get_rect(center=(SCREEN_WIDTH//2,45))
-fact_text=fact_font.render("Tigers are powerful wild cats.",True,pygame.Color("black"))
-fact_rect=fact_text.get_rect(center=(SCREEN_WIDTH//2,420))
-def game_loop():
-    clock=pygame.time.Clock()
-    running=True
-    while running:
-        for event in pygame.event.get():
-            if event.type==pygame.QUIT:
-                running=False
-        display_surface.blit(background_image,(0,0))   
-        display_surface.blit(image,image_rect)
-        display_surface.blit(heading_text,heading_rect)
-        display_surface.blit(fact_text,fact_rect)
-        pygame.display.flip()
-        clock.tick(30)
-        pygame.quit()
-if __name__=="__main__":
-    game_loop()
+class Book:
+    def __init__(self,title,author):
+        pass
+    def borrow(self):
+        pass
+    def return_book(self):
+        pass
+    def __str__(self):
+        pass
+print("="*42)
+print("Library System")
+print("="*42)
